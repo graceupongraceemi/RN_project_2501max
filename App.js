@@ -12,7 +12,10 @@ export default function App() {
 
   function addGoalHandler() {
     // console.log(enteredGoalText);
-    setCourseGoals([...courseGoals, enteredGoalText]);
+    setCourseGoals((currentCourseGoals) => [
+      ...currentCourseGoals,
+      enteredGoalText
+    ]);
   }
 
   return (
