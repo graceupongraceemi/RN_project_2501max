@@ -29,7 +29,9 @@ export default function App() {
         <Button title='Add Goal' onPress={addGoalHandler} />
       </View>
       <View style={styles.goalsContainer}>
-        <Text>List of goals...</Text>
+        {courseGoals.map((goal) => (
+          <Text>{goal}</Text>
+        ))}
       </View>
     </View>
   );
