@@ -37,13 +37,17 @@ export default function App() {
         <Button title='Add Goal' onPress={addGoalHandler} />
       </View>
       <View style={styles.goalsContainer}>
-        <Flatlist alwaysBounceVertical={false}>
-          {courseGoals.map((goal) => (
-            <View key={goal} style={styles.goalItem}>
-              <Text style={styles.goalText}>{goal}</Text>
-            </View>
-          ))}
-        </Flatlist>
+        <Flatlist
+          data={courseGoals}
+          renderItem={(itemData) => {
+            return (
+              <View style={styles.goalItem}>
+                <Text style={styles.goalText}>{itemData.item}</Text>
+              </View>
+            );
+          }}
+          alwaysBounceVertical={false}
+        />
       </View>
     </View>
   );
