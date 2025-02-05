@@ -1,11 +1,5 @@
 import { useState } from 'react';
-import {
-  StyleSheet,
-  View,
-  Button,
-  TextInput,
-  FlatList
-} from 'react-native';
+import { StyleSheet, View, Button, TextInput, FlatList } from 'react-native';
 
 import GoalItem from './components/GoalItem';
 
@@ -40,10 +34,7 @@ export default function App() {
         <FlatList
           data={courseGoals}
           renderItem={(itemData) => {
-            // itemData.index
-            return (
-              
-            );
+            return <GoalItem />;
           }}
           keyExtractor={(item, index) => {
             return item.id;
@@ -79,6 +70,5 @@ const styles = StyleSheet.create({
   },
   goalsContainer: {
     flex: 5
-  },
-  
+  }
 });
