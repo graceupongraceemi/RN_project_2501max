@@ -15,6 +15,10 @@ export default function App() {
     ]);
   }
 
+  function deleteGoalHandler() {
+    console.log('DELETE');
+  }
+
   return (
     <View style={styles.appContainer}>
       <GoalInput onAddGoal={addGoalHandler} />
