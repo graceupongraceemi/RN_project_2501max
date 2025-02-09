@@ -7,12 +7,7 @@ import GoalInput from './components/GoalIput';
 export default function App() {
   const [courseGoals, setCourseGoals] = useState([]);
 
-  function goalInputHandler(enteredText) {
-    // console.log(enteredText);
-    setEnteredGoalText(enteredText);
-  }
-
-  function addGoalHandler() {
+  function addGoalHandler(enteredGoalText) {
     // console.log(enteredGoalText);`
     setCourseGoals((currentCourseGoals) => [
       ...currentCourseGoals,
