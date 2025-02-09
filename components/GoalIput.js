@@ -7,11 +7,11 @@ function GoalInput(props) {
   function goalInputHandler(enteredText) {
     // console.log(enteredText);
     setEnteredGoalText(enteredText);
-    setEnteredGoalText('');
   }
 
   function addGoalHandler() {
     props.onAddGoal(enteredGoalText);
+    setEnteredGoalText('');
   }
   ``;
   return (
