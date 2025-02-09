@@ -2,7 +2,7 @@ import { StyleSheet, View, Text, Presable } from 'react-native';
 
 function GoalItem(props) {
   return (
-    <Presable>
+    <Presable onPress={props.onDeleteItem}>
       <View style={styles.goalItem}>
         <Text style={styles.goalText}>{props.text}</Text>
       </View>
