@@ -24,13 +24,12 @@ function GoalInput(props) {
           value={enteredGoalText}
         />
         <View style={styles.buttonContainer}>
-          <View>
+          <View style={styles.button}>
             <Button title='Add Goal' onPress={addGoalHandler} />
           </View>
-          <View>
+          <View style={styles.button}>
             <Button title='Cancel' />
           </View>
-          <Button title='Cancel' />
         </View>
       </View>
     </Modal>
@@ -46,17 +45,23 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 24,
+    padding: 16,
     borderBottomWidth: 1,
     borderBottomColor: '#cccccc'
   },
   textInput: {
     borderWith: 1,
     borderColor: '#cccccc',
-    width: '70%',
-    marginRight: 8,
+    width: '100%',
+    // marginRight: 8,
     padding: 8
   },
   buttonContainer: {
+    marginTop: 16,
     flexDirection: 'row'
+  },
+  button: {
+    width: 100,
+    marginHorizontal: 8
   }
 });
